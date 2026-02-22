@@ -1,0 +1,219 @@
+body {
+    background-color: #121212;
+    margin: 0;
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+}
+header {
+  font-family: "Metal Mania", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: #E0B25D;
+  font-size: 500%;
+  text-align: center;
+
+  position: relative;
+  background: #111;
+  border-radius: 14px;
+  padding: 30px 60px;
+  z-index: 1;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 4px; 
+  border-radius: 14px;
+
+  background: linear-gradient(
+    90deg,
+    #4A4156,
+    #E0B25D,
+    #121212,
+    #4A4156,
+    #E0B25D,
+    #4A4156
+    
+  );
+  background-size: 300% 300%;
+  animation: neonBorder 4s linear infinite;
+
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  
+  z-index: -1;
+}
+
+@keyframes neonBorder {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+
+h1{
+    color:#E0B25D;
+    font-family: "Metal Mania", system-ui;
+    text-align: center;
+}
+p{
+    color:#E0B25D;
+    text-align: center;
+}
+
+
+
+.gallery-container {
+    display: flex;
+    flex-wrap: none;         
+    gap: 25px;               
+    justify-content: center; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    flex: 1 1 250px;         
+    max-width: 300px;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      
+    transition: transform 0.6s ease;
+}
+
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(224, 178, 93, 0.4);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);   
+}
+
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    font-size: 1rem;
+    color: #E0B25D;
+    padding: 20px 0px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.overlay h3 {
+    margin: 0;
+    font-size: smaller;
+    text-transform: uppercase;
+    width: 100%;
+    
+}
+
+.overlay p {
+    margin: 5px 0 0;
+    font-size: 0.5rem;
+    color: #E0B25D;
+}
+
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .h3 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+
+.btn {
+  background-color: #121212;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color:#E0B25D;
+  font-size: 15px;
+  box-shadow: -6px, -6px 10px #4A4156;
+  font-family: "Metal Mania", system-ui;
+  padding-left: 15px;
+  padding-right: 15px;
+   cursor: pointer;
+  
+  
+  
+  
+}
+.btn:hover {
+  background-color: #121212;
+  color: #E0B25D;
+  text-align: center;
+  font-family: "Metal Mania", system-ui;
+  box-shadow: 0 0 10px #E0B25D, 0 0 40px #E0B25D, 0 0 80px #E0B25D;
+  transform: scale(1.10);
+  }
+
+  @media (max-width: 768px) {
+    .btn {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .btn:hover {
+      grid-template-columns: 1fr;
+    }
+
+    
+  }
+  
+    
+  
+  hr{
+    color:#E0B25D;
+    border: #E0B25D ;
+    border: 3cm;
+    border-radius: 4px;
+  }
+ header{
+  text-shadow: 
+    0 0 5px #5A3DA3,
+    0 0 15px rgba(224,178,93,0.5);}
+    
+  
